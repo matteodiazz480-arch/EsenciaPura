@@ -54,36 +54,36 @@ export const ContactAndFooter: React.FC = () => {
 
   return (
     <>
-      <section id="contacto" className="py-16 md:py-24 bg-brand-cream relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-olive tracking-tight">
+      <section id="contacto" className="py-12 md:py-20 bg-brand-cream relative">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-olive tracking-tight">
               Contacto y presupuestos
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-brand-charcoal/75 leading-relaxed font-normal">
-              Escribinos para encargar ramos personalizados, souvenirs de eventos o resolver cualquier consulta.
+            <p className="mt-2 text-xs sm:text-base text-brand-charcoal/75 leading-relaxed font-normal">
+              Escribinos para encargar ramos personalizados o consultar fechas para souvenirs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            <div className="lg:col-span-5 space-y-6">
-              <div className="bg-white p-6 sm:p-7 rounded-2xl border border-brand-sage/20 shadow-sm space-y-5">
-                <h3 className="text-lg sm:text-xl font-serif font-bold text-brand-olive">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-5">
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-sage/20 shadow-xs space-y-4">
+                <h3 className="text-base sm:text-lg font-serif font-bold text-brand-olive">
                   Datos del taller
                 </h3>
 
-                <div className="space-y-3.5">
+                <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-olive border border-brand-sage/20">
+                    <div className="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-olive border border-brand-sage/20">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/60">WhatsApp</p>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal/60">WhatsApp</p>
                       <a
                         href={buildWhatsAppLink(BRAND_INFO.phoneClean, 'Hola Florencia, quiero consultar por Esência Pura.')}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors"
+                        className="text-xs sm:text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors"
                       >
                         {BRAND_INFO.phone}
                       </a>
@@ -91,14 +91,14 @@ export const ContactAndFooter: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-gold-dark border border-brand-sage/20">
+                    <div className="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-gold-dark border border-brand-sage/20">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Email</p>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Email</p>
                       <a
                         href={`mailto:${BRAND_INFO.email}`}
-                        className="text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors break-all"
+                        className="text-xs sm:text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors break-all"
                       >
                         {BRAND_INFO.email}
                       </a>
@@ -106,16 +106,16 @@ export const ContactAndFooter: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-olive border border-brand-sage/20">
+                    <div className="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-olive border border-brand-sage/20">
                       <InstagramIcon className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Instagram</p>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Instagram</p>
                       <a
                         href={BRAND_INFO.instagramUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors"
+                        className="text-xs sm:text-sm font-medium text-brand-charcoal hover:text-brand-olive transition-colors"
                       >
                         @{BRAND_INFO.instagram}
                       </a>
@@ -123,12 +123,12 @@ export const ContactAndFooter: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-gold-dark border border-brand-sage/20">
+                    <div className="w-8 h-8 rounded-lg bg-brand-cream flex items-center justify-center shrink-0 text-brand-gold-dark border border-brand-sage/20">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Ubicación</p>
-                      <p className="text-sm font-medium text-brand-charcoal">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal/60">Ubicación</p>
+                      <p className="text-xs sm:text-sm font-medium text-brand-charcoal">
                         {BRAND_INFO.location}
                       </p>
                     </div>
@@ -136,14 +136,14 @@ export const ContactAndFooter: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-brand-sage/15 border border-brand-sage/25 flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-full bg-brand-olive text-white flex items-center justify-center shrink-0">
-                  <MessageCircle className="w-5 h-5" />
+              <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-brand-sage/15 border border-brand-sage/25 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-brand-olive text-white flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-brand-olive uppercase tracking-wider">Atención directa</h4>
-                  <p className="text-xs text-brand-charcoal/80 mt-0.5">
-                    Asesoramiento personalizado para cotizar pedidos y coordinar fechas de entrega.
+                  <h4 className="text-xs font-bold text-brand-olive uppercase tracking-wider">Atención personalizada</h4>
+                  <p className="text-[11px] sm:text-xs text-brand-charcoal/80 mt-0.5">
+                    Coordinamos envíos protegidos a todo el país.
                   </p>
                 </div>
               </div>
@@ -152,11 +152,11 @@ export const ContactAndFooter: React.FC = () => {
             <div className="lg:col-span-7">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white p-6 sm:p-8 rounded-2xl border border-brand-sage/20 shadow-sm space-y-5"
+                className="bg-white p-4 sm:p-6 md:p-7 rounded-2xl border border-brand-sage/20 shadow-xs space-y-4"
               >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div className="space-y-1">
-                    <label htmlFor="name" className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal/80">
+                    <label htmlFor="name" className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/80">
                       Nombre *
                     </label>
                     <input
@@ -167,12 +167,12 @@ export const ContactAndFooter: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Tu nombre"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-sm bg-brand-cream-light/30 transition-colors outline-none"
+                      className="w-full px-3 py-2 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-xs sm:text-sm bg-brand-cream-light/30 transition-colors outline-none"
                     />
                   </div>
 
                   <div className="space-y-1">
-                    <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal/80">
+                    <label htmlFor="phone" className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/80">
                       WhatsApp *
                     </label>
                     <input
@@ -183,13 +183,13 @@ export const ContactAndFooter: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Tu número"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-sm bg-brand-cream-light/30 transition-colors outline-none"
+                      className="w-full px-3 py-2 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-xs sm:text-sm bg-brand-cream-light/30 transition-colors outline-none"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="interest" className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal/80">
+                  <label htmlFor="interest" className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/80">
                     Interés
                   </label>
                   <select
@@ -197,7 +197,7 @@ export const ContactAndFooter: React.FC = () => {
                     name="interest"
                     value={formData.interest}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-sm bg-brand-cream-light/30 transition-colors outline-none"
+                    className="w-full px-3 py-2 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-xs sm:text-sm bg-brand-cream-light/30 transition-colors outline-none"
                   >
                     <option value="Colección Primavera">Colección Primavera (Ramos y flores)</option>
                     <option value="Velas y Difusores">Velas y Difusores Cerámicos</option>
@@ -207,7 +207,7 @@ export const ContactAndFooter: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="message" className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal/80">
+                  <label htmlFor="message" className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/80">
                     Mensaje o consulta
                   </label>
                   <textarea
@@ -217,7 +217,7 @@ export const ContactAndFooter: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Contanos qué fecha tenés en mente o cantidad..."
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-sm bg-brand-cream-light/30 transition-colors outline-none resize-none"
+                    className="w-full px-3 py-2 rounded-xl border border-brand-sage/30 focus:border-brand-olive text-xs sm:text-sm bg-brand-cream-light/30 transition-colors outline-none resize-none"
                   />
                 </div>
 
@@ -230,7 +230,7 @@ export const ContactAndFooter: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 px-6 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-olive disabled:opacity-50"
+                  className="w-full py-2.5 sm:py-3 px-5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-xs hover:shadow flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-olive disabled:opacity-50"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>{isSubmitting ? 'Enviando...' : 'Enviar consulta por WhatsApp'}</span>
@@ -241,29 +241,29 @@ export const ContactAndFooter: React.FC = () => {
         </div>
       </section>
 
-      <footer className="bg-brand-charcoal text-brand-cream pt-12 pb-8 border-t border-brand-sage/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between pb-8 border-b border-brand-sage/20 gap-6">
+      <footer className="bg-brand-charcoal text-brand-cream pt-10 pb-6 border-t border-brand-sage/20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between pb-6 border-b border-brand-sage/20 gap-4">
             <div className="flex items-center gap-3">
               <img
                 src="/imagenes/logo.jpg"
                 alt="Esência Pura Logo"
-                className="w-10 h-10 rounded-full object-cover border border-brand-gold"
-                width="40"
-                height="40"
+                className="w-9 h-9 rounded-full object-cover border border-brand-gold"
+                width="36"
+                height="36"
                 loading="lazy"
               />
               <div>
-                <span className="font-serif text-lg font-bold text-white block">
+                <span className="font-serif text-base font-bold text-white block">
                   {BRAND_INFO.name}
                 </span>
-                <span className="text-[10px] text-brand-gold uppercase tracking-wider block">
+                <span className="text-[9px] text-brand-gold uppercase tracking-wider block">
                   Cera de Soja & Aromas
                 </span>
               </div>
             </div>
 
-            <nav className="flex flex-wrap items-center justify-center gap-6 text-xs text-brand-cream/80">
+            <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-brand-cream/80">
               <a href="#inicio" className="hover:text-white transition-colors">Inicio</a>
               <a href="#colecciones" className="hover:text-white transition-colors">Colecciones</a>
               <a href="#catalogo" className="hover:text-white transition-colors">Catálogo</a>
@@ -273,13 +273,13 @@ export const ContactAndFooter: React.FC = () => {
             </nav>
           </div>
 
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/60 gap-3">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-cream/60 gap-2">
             <p>
               © {new Date().getFullYear()} {BRAND_INFO.name}. San Martín, Buenos Aires.
             </p>
             <p className="flex items-center gap-1.5 text-brand-cream/70">
               <span>Elaboración artesanal</span>
-              <Heart className="w-3.5 h-3.5 text-brand-gold fill-current" />
+              <Heart className="w-3 h-3 text-brand-gold fill-current" />
             </p>
           </div>
         </div>

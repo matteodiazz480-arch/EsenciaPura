@@ -46,20 +46,20 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16"
+      className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16"
     >
-      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none z-0 flex flex-col justify-between py-6 gap-5 sm:gap-6 opacity-30">
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none z-0 flex flex-col justify-between py-4 sm:py-6 gap-4 sm:gap-6 opacity-75">
         <div className="overflow-hidden w-full">
-          <div className="animate-marquee flex gap-4 sm:gap-6">
+          <div className="animate-marquee flex gap-3 sm:gap-5">
             {marqueeRow1.map((src, idx) => (
               <div
                 key={`r1-${idx}`}
-                className="w-48 sm:w-64 md:w-72 h-36 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-sm shrink-0 bg-brand-cream-dark"
+                className="w-44 sm:w-60 md:w-72 h-32 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-md shrink-0 bg-brand-cream-dark border border-white/60"
               >
                 <img
                   src={src}
-                  alt="Esência Pura Vela"
-                  className="w-full h-full object-cover"
+                  alt="Vela artesanal de cera de soja"
+                  className="w-full h-full object-cover brightness-[1.02] contrast-[1.03]"
                   loading="eager"
                   width="288"
                   height="208"
@@ -70,16 +70,16 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className="overflow-hidden w-full">
-          <div className="animate-marquee-reverse flex gap-4 sm:gap-6">
+          <div className="animate-marquee-reverse flex gap-3 sm:gap-5">
             {marqueeRow2.map((src, idx) => (
               <div
                 key={`r2-${idx}`}
-                className="w-48 sm:w-64 md:w-72 h-36 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-sm shrink-0 bg-brand-cream-dark"
+                className="w-44 sm:w-60 md:w-72 h-32 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-md shrink-0 bg-brand-cream-dark border border-white/60"
               >
                 <img
                   src={src}
-                  alt="Esência Pura Vela"
-                  className="w-full h-full object-cover"
+                  alt="Vela artesanal botánica"
+                  className="w-full h-full object-cover brightness-[1.02] contrast-[1.03]"
                   loading="eager"
                   width="288"
                   height="208"
@@ -90,16 +90,16 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className="overflow-hidden w-full hidden sm:block">
-          <div className="animate-marquee flex gap-4 sm:gap-6">
+          <div className="animate-marquee flex gap-3 sm:gap-5">
             {marqueeRow3.map((src, idx) => (
               <div
                 key={`r3-${idx}`}
-                className="w-48 sm:w-64 md:w-72 h-36 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-sm shrink-0 bg-brand-cream-dark"
+                className="w-44 sm:w-60 md:w-72 h-32 sm:h-44 md:h-52 rounded-2xl overflow-hidden shadow-md shrink-0 bg-brand-cream-dark border border-white/60"
               >
                 <img
                   src={src}
-                  alt="Esência Pura Vela"
-                  className="w-full h-full object-cover"
+                  alt="Diseño floral en cera de soja"
+                  className="w-full h-full object-cover brightness-[1.02] contrast-[1.03]"
                   loading="eager"
                   width="288"
                   height="208"
@@ -110,35 +110,37 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-cream-light/85 via-brand-cream/80 to-brand-cream/95 backdrop-blur-[1px] pointer-events-none z-1" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-cream/65 via-brand-cream/50 to-brand-cream/80 backdrop-blur-[1px] pointer-events-none z-1" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 md:space-y-9">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-olive leading-[1.15] tracking-tight">
-          Velas de cera de soja, aromas naturales y diseños únicos
-        </h1>
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="bg-brand-cream/85 backdrop-blur-md p-6 sm:p-10 rounded-3xl border border-white/80 shadow-xl space-y-5 sm:space-y-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-olive leading-[1.18] tracking-tight">
+            Velas de cera de soja, aromas naturales y diseños únicos
+          </h1>
 
-        <p className="text-base sm:text-lg md:text-xl text-brand-charcoal/85 max-w-2xl mx-auto font-normal leading-relaxed">
-          Creaciones botánicas modeladas a mano con cera vegetal pura y fragancias naturales para iluminar tus espacios y celebrar fechas especiales.
-        </p>
+          <p className="text-sm sm:text-base md:text-lg text-brand-charcoal/85 max-w-xl mx-auto font-normal leading-relaxed">
+            Creaciones botánicas modeladas a mano con cera vegetal pura y fragancias naturales para iluminar tus espacios y celebrar fechas especiales.
+          </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <a
-            href="#catalogo"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-olive focus:ring-offset-2"
-          >
-            <span>Explorar catálogo</span>
-            <ArrowDown className="w-4 h-4 animate-bounce" />
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <a
+              href="#catalogo"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-olive focus:ring-offset-2"
+            >
+              <span>Explorar catálogo</span>
+              <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
+            </a>
 
-          <a
-            href={whatsappHeroUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-brand-gold hover:bg-brand-gold-dark text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2"
-          >
-            <MessageCircle className="w-4 h-4" />
-            <span>Consultar por WhatsApp</span>
-          </a>
+            <a
+              href={whatsappHeroUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-brand-gold hover:bg-brand-gold-dark text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Consultar por WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

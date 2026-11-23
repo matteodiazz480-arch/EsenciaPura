@@ -26,12 +26,12 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
   if (!product) return null
 
-  const whatsappMessage = `Hola Florencia! Quiero consultar por el modelo "${product.name}" (${product.scent}). ¿Podrías brindarme más información sobre disponibilidad y tiempos de elaboración?`
+  const whatsappMessage = `Hola Florencia! Quiero consultar por "${product.name}" (${product.scent}). ¿Podrías brindarme más información sobre disponibilidad y tiempos de entrega?`
   const whatsappUrl = buildWhatsAppLink(BRAND_INFO.phoneClean, whatsappMessage)
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-brand-charcoal/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto bg-brand-charcoal/60 backdrop-blur-xs animate-fadeIn"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-product-title"
@@ -42,85 +42,154 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         aria-hidden="true"
       />
 
-      <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-sage/30 z-10 my-8">
+      <div className="relative w-full max-w-xl md:max-w-3xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-brand-sage/30 z-10 my-auto max-h-[92vh] flex flex-col">
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-brand-charcoal flex items-center justify-center shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-olive"
+          className="absolute top-3 right-3 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal flex items-center justify-center shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-brand-olive"
           aria-label="Cerrar ventana"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="relative aspect-[4/5] md:aspect-auto h-72 md:h-full bg-brand-cream overflow-hidden">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-cover"
-              width="600"
-              height="600"
-            />
-            {product.badge && (
-              <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white bg-brand-olive rounded-full shadow-sm">
-                {product.badge}
-              </span>
-            )}
-          </div>
+        <div className="overflow-y-auto flex-1">
+          <div className="hidden md:grid md:grid-cols-2">
+            <div className="relative aspect-square bg-brand-cream overflow-hidden">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                width="450"
+                height="450"
+              />
+              {product.badge && (
+                <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white bg-brand-olive rounded-full shadow-sm">
+                  {product.badge}
+                </span>
+              )}
+            </div>
 
-          <div className="p-6 sm:p-8 flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <div>
-                <h3 id="modal-product-title" className="text-2xl sm:text-3xl font-serif font-bold text-brand-olive">
-                  {product.name}
-                </h3>
-                <div className="mt-2 flex items-center gap-2 text-xs font-medium text-brand-gold-dark">
-                  <Sparkles className="w-4 h-4 shrink-0" />
-                  <span>{product.scent}</span>
+            <div className="p-7 flex flex-col justify-between space-y-5">
+              <div className="space-y-3.5">
+                <div>
+                  <h3 id="modal-product-title" className="text-2xl font-serif font-bold text-brand-olive leading-tight">
+                    {product.name}
+                  </h3>
+                  <div className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-brand-gold-dark">
+                    <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                    <span>{product.scent}</span>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-normal">
+                  {product.description}
+                </p>
+
+                <div className="space-y-1.5 pt-1">
+                  <h4 className="text-[11px] font-semibold uppercase tracking-wider text-brand-charcoal/60">
+                    Características artesanales
+                  </h4>
+                  <ul className="space-y-1">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-xs text-brand-charcoal/80">
+                        <Check className="w-3 h-3 text-brand-olive shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="p-3 rounded-xl bg-brand-cream-light border border-brand-sage/20 flex items-center gap-2.5">
+                  <ShieldCheck className="w-4 h-4 text-brand-olive shrink-0" />
+                  <p className="text-[11px] text-brand-charcoal/80 leading-tight">
+                    Elaboración artesanal en San Martín, Buenos Aires.
+                  </p>
                 </div>
               </div>
 
-              <p className="text-sm text-brand-charcoal/80 leading-relaxed font-normal">
-                {product.description}
-              </p>
+              <div className="pt-3 border-t border-brand-sage/20 flex items-center gap-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-sm"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  <span>Consultar por WhatsApp</span>
+                </a>
 
-              <div className="space-y-2 pt-2">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal/60">
-                  Características artesanales
-                </h4>
-                <ul className="space-y-1.5">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs text-brand-charcoal/80">
-                      <Check className="w-3.5 h-3.5 text-brand-olive shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="px-4 py-2.5 rounded-full border border-brand-sage/40 hover:bg-brand-cream text-brand-charcoal text-xs font-semibold uppercase tracking-wider transition-colors"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:hidden p-4 space-y-4">
+            <div className="flex items-start gap-3.5 pr-8">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-2xl overflow-hidden bg-brand-cream shadow-sm border border-brand-sage/20">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  width="120"
+                  height="120"
+                />
               </div>
 
-              <div className="p-3 rounded-xl bg-brand-cream-light border border-brand-sage/20 flex items-center gap-3">
-                <ShieldCheck className="w-5 h-5 text-brand-olive shrink-0" />
-                <p className="text-[11px] text-brand-charcoal/80 leading-tight">
-                  Hecho a mano en San Martín, Buenos Aires. Podés pedirlo en colores o aromas a elección.
-                </p>
+              <div className="space-y-1 flex-1">
+                {product.badge && (
+                  <span className="inline-block px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white bg-brand-olive rounded-full">
+                    {product.badge}
+                  </span>
+                )}
+                <h3 className="text-base sm:text-lg font-serif font-bold text-brand-olive leading-tight">
+                  {product.name}
+                </h3>
+                <div className="flex items-center gap-1 text-[11px] font-medium text-brand-gold-dark">
+                  <Sparkles className="w-3 h-3 shrink-0" />
+                  <span className="line-clamp-1">{product.scent}</span>
+                </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-brand-sage/20 flex flex-col sm:flex-row items-center gap-3">
+            <p className="text-xs text-brand-charcoal/80 leading-relaxed font-normal">
+              {product.description}
+            </p>
+
+            <div className="p-3 rounded-xl bg-brand-cream-light border border-brand-sage/20 space-y-1.5">
+              <h4 className="text-[10px] font-semibold uppercase tracking-wider text-brand-charcoal/60">
+                Detalles del producto
+              </h4>
+              <ul className="space-y-1">
+                {product.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-1.5 text-[11px] text-brand-charcoal/80">
+                    <Check className="w-3 h-3 text-brand-olive shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="pt-2 flex flex-col gap-2">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-olive"
+                className="w-full py-2.5 px-4 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-3.5 h-3.5" />
                 <span>Consultar por WhatsApp</span>
               </a>
 
               <button
                 type="button"
                 onClick={onClose}
-                className="w-full sm:w-auto px-5 py-3 rounded-full border border-brand-sage/40 hover:bg-brand-cream text-brand-charcoal text-xs font-semibold uppercase tracking-wider transition-colors"
+                className="w-full py-2 rounded-full border border-brand-sage/30 text-brand-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-brand-cream transition-colors"
               >
                 Cerrar
               </button>
