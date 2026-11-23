@@ -1,0 +1,20 @@
+PROJECT RULES - ESÊNCIA PURA
+
+1. Stack moderno obligatorio: Usar tecnologías modernas como React, TypeScript y prácticas actuales de desarrollo frontend, manteniendo tipado claro, componentes limpios y sin archivos o código duplicado.
+2. Sin mini títulos sobre títulos: Nunca poner etiquetas pequeñas, eyebrows, kicker o mini títulos encima de un h1, h2 o h3. Cada título principal o de sección debe ir limpio, directo y sin ese mini encabezado arriba.
+3. Tarjetas limpias y sin sobrecarga: No hacer tarjetas totalmente cargadas de texto, badges, múltiples botones, estadísticas o adornos. Mantener cada tarjeta respirada, con jerarquía clara y solo los datos esenciales.
+4. Sin notas dentro del código: No escribir comentarios ni notas explicativas dentro del código (TSX, TS, CSS, HTML, etc.). El código debe ser limpio, autoexplicativo y sin ruido de comentarios.
+5. Cero archivos innecesarios: No crear archivos de relleno, pruebas temporales, documentación sobrante ni componentes que no se usen.
+6. Eliminar archivos innecesarios: Eliminar cualquier archivo, carpeta, asset o código muerto que no aporte al proyecto o haya quedado sin uso.
+7. Optimización constante: Optimizar siempre el código, los componentes, los estilos, las animaciones y el peso/carga de los recursos para lograr el mejor rendimiento posible.
+8. Comprobación antes de cerrar: Antes de dar por finalizada cualquier tarea o entrega, comprobar que todo funcione bien, sin errores de TypeScript o consola, sin enlaces rotos y con comportamiento correcto en escritorio y móvil.
+9. Métodos de seguridad en cada cambio: Aplicar métodos y buenas prácticas de seguridad en cada cambio o implementación (sanitización y validación de entradas, prevención de XSS/inyección, manejo seguro de enlaces externos con rel="noopener noreferrer", protección de datos/claves si aplica y no exponer información sensible).
+10. Verificación exhaustiva: Verificar cada cosa punto por punto (rutas de archivos, nombres de carpetas, contraste de colores, tipografías cargadas, comportamiento de botones/formularios, navbar y diseño responsive) antes de reportar avances.
+11. Uso estricto de la carpeta imagenes/: Todas las imágenes deben provenir de la carpeta imagenes/ mediante rutas relativas válidas; nunca dejar rutas rotas ni placeholders ficticios si existe o corresponde un archivo en imagenes/.
+12. Sin botón flotante de WhatsApp: Nunca agregar botones flotantes de WhatsApp (ni íconos fijos en esquina/pantalla) sobre el contenido.
+13. Cuidado estricto del Navbar: Cuidar especialmente el navbar en escritorio y móvil: buena altura, alineación precisa, sin desbordes ni saltos de línea raros en los enlaces, logo nítido y bien proporcionado, menú móvil prolijo y sin superposiciones.
+14. Diseño responsive obligatorio: Todo el sitio debe adaptarse de forma impecable a pantallas móviles, tablets y escritorio, evitando desbordes horizontales o elementos aplastados.
+15. Coherencia con la identidad de marca: Respetar siempre la paleta oficial (#556B4C, #C8A056, #F5EFE6, #A8B49A), las tipografías (Playfair Display y Montserrat) y el tono artesanal, cálido y natural de Esência Pura.
+16. Cambios acotados y limpios: Tocar únicamente lo necesario para cumplir el objetivo pedido, sin reescribir partes sanas ni introducir dependencias innecesarias.
+17. Accesibilidad y legibilidad: Asegurar buen contraste de texto sobre fondos claros, tamaños de letra legibles, botones con área táctil cómoda y estructura semántica correcta.
+18. Estados completos en la interfaz: Revisar que estados interactivos (hover, focus, envío o consulta, carga o vacío) se vean prolijos y coherentes sin romper el diseño.
