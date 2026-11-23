@@ -13,7 +13,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'primavera' as const,
       title: 'Colección Primavera',
       description: 'Bouquets y flores botánicas modeladas a mano.',
-      image: '/imagenes/63f9ad17-ac6f-48dd-a4d3-5600e9b8f3c2.jpg',
+      image: '/imagenes/web/63f9ad17-ac6f-48dd-a4d3-5600e9b8f3c2.jpg',
       alt: 'Colección Primavera Esência Pura',
       whatsappMessage: 'Hola Florencia! Quiero consultar por los ramos de la Colección Primavera.'
     },
@@ -21,7 +21,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'aromaticas' as const,
       title: 'Velas & Difusores',
       description: 'Sets de cerámica artesanal para ambientar el hogar.',
-      image: '/imagenes/78a459f8-0b71-4fb3-9d3e-894cfddf52ee.jpg',
+      image: '/imagenes/web/78a459f8-0b71-4fb3-9d3e-894cfddf52ee.jpg',
       alt: 'Velas Aromáticas y Difusores',
       whatsappMessage: 'Hola Florencia! Quiero consultar por los sets de velas y difusores cerámicos.'
     },
@@ -29,7 +29,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'regalos' as const,
       title: 'Regalos Especiales',
       description: 'Ramos con dedicatorias en cinta y cajas de regalo.',
-      image: '/imagenes/8021dced-a8b2-4767-9fcc-2e939269ff07.jpg',
+      image: '/imagenes/web/8021dced-a8b2-4767-9fcc-2e939269ff07.jpg',
       alt: 'Regalos Especiales Personalizados',
       whatsappMessage: 'Hola Florencia! Quiero encargar un regalo especial personalizado.'
     }
@@ -54,7 +54,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
             return (
               <div
                 key={item.id}
-                className="group flex flex-row md:flex-col bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-sage/20 shadow-xs hover:shadow-md transition-all duration-300"
+                className="group flex flex-row md:flex-col bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-sage/20 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="relative w-28 sm:w-36 md:w-full shrink-0 aspect-square md:aspect-[4/3] overflow-hidden bg-brand-cream">
                   <img
@@ -63,7 +63,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     width="320"
                     height="240"
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                   />
                 </div>
 

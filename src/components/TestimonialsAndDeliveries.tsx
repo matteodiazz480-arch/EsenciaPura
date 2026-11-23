@@ -6,7 +6,7 @@ export const TestimonialsAndDeliveries: React.FC = () => {
   const selectedTestimonials = TESTIMONIALS.slice(0, 3)
 
   return (
-    <section id="testimonios" className="py-12 md:py-20 bg-brand-cream-light">
+    <section id="testimonios" className="cv-auto py-12 md:py-20 bg-brand-cream-light">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-olive tracking-tight">
@@ -21,7 +21,7 @@ export const TestimonialsAndDeliveries: React.FC = () => {
           {selectedTestimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-brand-sage/20 shadow-xs flex flex-col justify-between space-y-3"
+              className="bg-white p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-brand-sage/20 shadow-sm flex flex-col justify-between space-y-3"
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-1 text-brand-gold">
@@ -59,7 +59,7 @@ export const TestimonialsAndDeliveries: React.FC = () => {
             {REAL_DELIVERIES.map((del) => (
               <div
                 key={del.id}
-                className="group bg-white rounded-xl overflow-hidden border border-brand-sage/20 shadow-xs hover:shadow-md transition-all duration-300"
+                className="group bg-white rounded-xl overflow-hidden border border-brand-sage/20 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="relative aspect-square overflow-hidden bg-brand-cream">
                   <img
@@ -68,7 +68,7 @@ export const TestimonialsAndDeliveries: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     width="260"
                     height="260"
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                   />
                 </div>
                 <div className="p-2.5 sm:p-3">

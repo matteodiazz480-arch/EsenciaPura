@@ -43,9 +43,9 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ initialCategory 
               key={cat.key}
               type="button"
               onClick={() => setSelectedCategory(cat.key)}
-              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-olive ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-olive ${
                 selectedCategory === cat.key
-                  ? 'bg-brand-olive text-white shadow-xs'
+                  ? 'bg-brand-olive text-white shadow-sm'
                   : 'bg-white text-brand-charcoal/80 hover:bg-brand-sage/20 border border-brand-sage/30'
               }`}
             >
@@ -64,7 +64,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ initialCategory 
             return (
               <div
                 key={product.id}
-                className="group flex flex-col lg:flex-row bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-sage/20 shadow-xs hover:shadow-md transition-all duration-300"
+                className="group flex flex-col lg:flex-row bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-sage/20 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div
                   className="relative w-full lg:w-44 xl:w-48 shrink-0 aspect-square lg:aspect-auto overflow-hidden bg-brand-cream cursor-pointer"
@@ -76,10 +76,10 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ initialCategory 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     width="240"
                     height="240"
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                   />
                   {product.badge && (
-                    <span className="absolute top-2 left-2 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white bg-brand-olive rounded-full shadow-xs">
+                    <span className="absolute top-2 left-2 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white bg-brand-olive rounded-full shadow-sm">
                       {product.badge}
                     </span>
                   )}
@@ -118,7 +118,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ initialCategory 
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white bg-brand-gold hover:bg-brand-gold-dark transition-colors shadow-xs"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white bg-brand-gold hover:bg-brand-gold-dark transition-colors shadow-sm"
                       aria-label={`Consultar por ${product.name}`}
                     >
                       <MessageCircle className="w-3 h-3" />

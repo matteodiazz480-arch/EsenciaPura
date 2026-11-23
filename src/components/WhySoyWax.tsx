@@ -21,7 +21,7 @@ export const WhySoyWax: React.FC = () => {
   ]
 
   return (
-    <section id="beneficios" className="py-12 md:py-20 bg-brand-cream">
+    <section id="beneficios" className="cv-auto py-12 md:py-20 bg-brand-cream">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-olive tracking-tight">
@@ -35,12 +35,12 @@ export const WhySoyWax: React.FC = () => {
         <div className="grid grid-cols-12 gap-3 sm:gap-6 items-stretch">
           <div className="col-span-5 md:col-span-5 relative rounded-xl sm:rounded-2xl overflow-hidden shadow-sm border border-brand-sage/20 bg-brand-cream-dark">
             <img
-              src="/imagenes/27bed076-cc0d-4e08-b6e0-5bdd4c8bf536.jpg"
+              src="/imagenes/web/27bed076-cc0d-4e08-b6e0-5bdd4c8bf536.jpg"
               alt="Velas y difusores artesanales de cera de soja"
               className="w-full h-full min-h-[220px] sm:min-h-[280px] md:min-h-[340px] object-cover"
               width="450"
               height="340"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </div>
 
@@ -48,7 +48,7 @@ export const WhySoyWax: React.FC = () => {
             {benefits.map((b, idx) => (
               <div
                 key={idx}
-                className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-brand-sage/20 shadow-xs flex items-start gap-2.5 sm:gap-3.5"
+                className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-brand-sage/20 shadow-sm flex items-start gap-2.5 sm:gap-3.5"
               >
                 <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-brand-cream-light flex items-center justify-center shrink-0 border border-brand-sage/20">
                   {b.icon}

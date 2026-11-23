@@ -54,7 +54,7 @@ export const ContactAndFooter: React.FC = () => {
 
   return (
     <>
-      <section id="contacto" className="py-12 md:py-20 bg-brand-cream relative">
+      <section id="contacto" className="cv-auto py-12 md:py-20 bg-brand-cream relative">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-olive tracking-tight">
@@ -67,7 +67,7 @@ export const ContactAndFooter: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             <div className="lg:col-span-5 space-y-4 sm:space-y-5">
-              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-sage/20 shadow-xs space-y-4">
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-sage/20 shadow-sm space-y-4">
                 <h3 className="text-base sm:text-lg font-serif font-bold text-brand-olive">
                   Datos del taller
                 </h3>
@@ -152,7 +152,7 @@ export const ContactAndFooter: React.FC = () => {
             <div className="lg:col-span-7">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white p-4 sm:p-6 md:p-7 rounded-2xl border border-brand-sage/20 shadow-xs space-y-4"
+                className="bg-white p-4 sm:p-6 md:p-7 rounded-2xl border border-brand-sage/20 shadow-sm space-y-4"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div className="space-y-1">
@@ -230,7 +230,7 @@ export const ContactAndFooter: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-2.5 sm:py-3 px-5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-xs hover:shadow flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-olive disabled:opacity-50"
+                  className="w-full py-2.5 sm:py-3 px-5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-olive disabled:opacity-50"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>{isSubmitting ? 'Enviando...' : 'Enviar consulta por WhatsApp'}</span>
@@ -251,7 +251,7 @@ export const ContactAndFooter: React.FC = () => {
                 className="w-9 h-9 rounded-full object-cover border border-brand-gold"
                 width="36"
                 height="36"
-                loading="lazy"
+                loading="lazy" decoding="async"
               />
               <div>
                 <span className="font-serif text-base font-bold text-white block">

@@ -31,7 +31,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto bg-brand-charcoal/60 backdrop-blur-xs animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto bg-brand-charcoal/60 modal-enter"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-product-title"
@@ -112,7 +112,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-sm"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-brand-olive hover:bg-brand-olive-dark text-white text-xs font-semibold uppercase tracking-wider transition-colors duration-200 shadow-sm"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   <span>Consultar por WhatsApp</span>

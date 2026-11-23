@@ -32,10 +32,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-brand-cream/95 backdrop-blur-md shadow-sm border-b border-brand-sage/20 py-2.5'
-          : 'bg-brand-cream/80 backdrop-blur-sm py-3.5'
+      className={`fixed top-0 left-0 right-0 z-50 bg-brand-cream transition-shadow duration-300 py-2.5 ${
+        isScrolled ? 'shadow-sm border-b border-brand-sage/20' : 'border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +78,7 @@ export const Navbar: React.FC = () => {
               href={whatsappNavUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-brand-olive hover:bg-brand-olive-dark transition-all duration-200 rounded-full shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-brand-olive"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-brand-olive hover:bg-brand-olive-dark transition-colors duration-200 rounded-full shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-brand-olive"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
@@ -102,7 +100,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-brand-cream border-b border-brand-sage/30 shadow-lg px-4 pt-3 pb-6 animate-fadeIn">
+        <div className="md:hidden bg-brand-cream border-b border-brand-sage/30 shadow-lg px-4 pt-3 pb-6">
           <nav className="flex flex-col space-y-3" aria-label="Menú móvil">
             {navLinks.map((link) => (
               <a
