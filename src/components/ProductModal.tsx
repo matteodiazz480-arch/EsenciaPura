@@ -19,7 +19,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
       window.addEventListener('keydown', handleKeyDown)
     }
     return () => {
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [product, onClose])

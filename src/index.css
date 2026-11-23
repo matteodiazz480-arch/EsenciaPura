@@ -7,12 +7,16 @@
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: clip;
+    touch-action: pan-y;
   }
   body {
     background-color: #F5EFE6;
     color: #232A20;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    overflow-x: clip;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
@@ -34,6 +38,7 @@
   animation: marquee 70s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
+  touch-action: pan-y;
 }
 
 .marquee-reverse {
@@ -46,11 +51,11 @@
 }
 
 .hero-veil {
-  background: radial-gradient(ellipse 70% 60% at center, rgba(245, 239, 230, 0.93) 0%, rgba(245, 239, 230, 0.8) 45%, rgba(245, 239, 230, 0.18) 100%);
+  background: radial-gradient(ellipse 80% 65% at center, rgba(245, 239, 230, 0.62) 0%, rgba(245, 239, 230, 0.42) 50%, rgba(245, 239, 230, 0.15) 100%);
 }
 
 .hero-title {
-  text-shadow: 0 1px 12px rgba(245, 239, 230, 0.9);
+  text-shadow: 0 1px 12px rgba(245, 239, 230, 0.95), 0 2px 24px rgba(245, 239, 230, 0.85);
 }
 
 .modal-enter {
@@ -64,11 +69,6 @@
   to {
     opacity: 1;
   }
-}
-
-.cv-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
 }
 
 @media (prefers-reduced-motion: reduce) {

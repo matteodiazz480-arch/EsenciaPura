@@ -16,7 +16,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-cream text-brand-charcoal">
+    <div className="min-h-screen flex flex-col bg-brand-cream text-brand-charcoal overflow-x-clip">
       <Navbar />
       <main className="flex-grow">
         <Hero />

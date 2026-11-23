@@ -3,10 +3,9 @@ import { ArrowDown, MessageCircle } from 'lucide-react'
 import { BRAND_INFO } from '../data/candlesData'
 import { buildWhatsAppLink } from '../utils/security'
 
-const MARQUEE_ROWS: { images: string[]; reverse: boolean; mobile: boolean }[] = [
+const MARQUEE_ROWS: { images: string[]; reverse: boolean }[] = [
   {
     reverse: false,
-    mobile: true,
     images: [
       '/imagenes/web/8a8be692-1606-432e-98e0-8f1777ca4ab6.jpg',
       '/imagenes/web/63f9ad17-ac6f-48dd-a4d3-5600e9b8f3c2.jpg',
@@ -19,7 +18,6 @@ const MARQUEE_ROWS: { images: string[]; reverse: boolean; mobile: boolean }[] = 
   },
   {
     reverse: true,
-    mobile: true,
     images: [
       '/imagenes/web/27bed076-cc0d-4e08-b6e0-5bdd4c8bf536.jpg',
       '/imagenes/web/1684d37a-7c5c-4749-a61d-2a5917895cd9.jpg',
@@ -32,7 +30,6 @@ const MARQUEE_ROWS: { images: string[]; reverse: boolean; mobile: boolean }[] = 
   },
   {
     reverse: false,
-    mobile: false,
     images: [
       '/imagenes/web/1d94641e-403f-4a03-b52b-979276165394.jpg',
       '/imagenes/web/a5134a13-e217-4c69-91f2-008a392c572a.jpg',
@@ -66,30 +63,30 @@ export const Hero: React.FC = () => {
     <section
       ref={sectionRef}
       id="inicio"
-      className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16"
+      className="relative min-h-[88vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 touch-pan-y"
     >
       <div
-        className={`absolute inset-0 pointer-events-none select-none flex flex-col justify-between py-4 sm:py-6 gap-4 sm:gap-6 ${
+        className={`absolute inset-0 pointer-events-none select-none flex flex-col justify-between py-2 sm:py-5 gap-2.5 sm:gap-5 touch-pan-y ${
           isVisible ? '' : 'marquee-paused'
         }`}
         aria-hidden="true"
       >
         {MARQUEE_ROWS.map((row, rowIdx) => (
-          <div key={rowIdx} className={`overflow-hidden w-full ${row.mobile ? '' : 'hidden sm:block'}`}>
-            <div className={`marquee-track gap-3 sm:gap-5 ${row.reverse ? 'marquee-reverse' : ''}`}>
+          <div key={rowIdx} className="overflow-hidden w-full touch-pan-y">
+            <div className={`marquee-track gap-2.5 sm:gap-4 md:gap-5 ${row.reverse ? 'marquee-reverse' : ''}`}>
               {[...row.images, ...row.images].map((src, idx) => (
                 <div
                   key={idx}
-                  className="w-44 sm:w-60 md:w-72 h-32 sm:h-44 md:h-52 rounded-2xl overflow-hidden shrink-0 bg-brand-cream-dark"
+                  className="w-36 sm:w-56 md:w-72 h-24 sm:h-36 md:h-48 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 bg-brand-cream-dark shadow-sm"
                 >
                   <img
                     src={src}
                     alt=""
                     className="w-full h-full object-cover"
-                    loading={rowIdx === 0 && idx < 7 ? 'eager' : 'lazy'}
+                    loading="eager"
                     decoding="async"
                     width="288"
-                    height="208"
+                    height="192"
                   />
                 </div>
               ))}
@@ -98,9 +95,9 @@ export const Hero: React.FC = () => {
         ))}
       </div>
 
-      <div className="absolute inset-0 pointer-events-none hero-veil" />
+      <div className="absolute inset-0 pointer-events-none hero-veil touch-pan-y" />
 
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 sm:space-y-7">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-olive leading-[1.15] tracking-tight hero-title">
           Velas de cera de soja, aromas naturales y diseños únicos
         </h1>
