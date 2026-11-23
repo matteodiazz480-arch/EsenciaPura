@@ -13,6 +13,7 @@ const MARQUEE_ROWS: { images: string[]; reverse: boolean }[] = [
       '/imagenes/web/78a459f8-0b71-4fb3-9d3e-894cfddf52ee.jpg',
       '/imagenes/web/8021dced-a8b2-4767-9fcc-2e939269ff07.jpg',
       '/imagenes/web/5271559e-9f6d-4598-8ce4-1b85a9ed9a77.jpg',
+      '/imagenes/web/125aeb7f-91a5-4ef4-8e0d-b4c3ee387de9.jpg',
     ],
   },
   {
@@ -24,28 +25,19 @@ const MARQUEE_ROWS: { images: string[]; reverse: boolean }[] = [
       '/imagenes/web/b45e2ab6-a442-48f0-b2aa-78fbc65ad591.jpg',
       '/imagenes/web/71cf6e28-3b5f-43f4-a2c8-513762bc1469.jpg',
       '/imagenes/web/96e8cdfd-34c1-4874-bb08-149d6d6c5da3.jpg',
+      '/imagenes/web/058e26b3-1016-41f6-9a44-b1243bce05b4.jpg',
     ],
   },
   {
     reverse: false,
     images: [
-      '/imagenes/web/058e26b3-1016-41f6-9a44-b1243bce05b4.jpg',
       '/imagenes/web/1d94641e-403f-4a03-b52b-979276165394.jpg',
       '/imagenes/web/a5134a13-e217-4c69-91f2-008a392c572a.jpg',
       '/imagenes/web/30e58005-ce1e-4fa5-85fc-7e848742d3b9.jpg',
       '/imagenes/web/2f94006a-ea42-4945-8633-642eccdcef48.jpg',
       '/imagenes/web/b039b45f-fcf3-4794-8faf-c4e6bbe519e9.jpg',
-    ],
-  },
-  {
-    reverse: true,
-    images: [
       '/imagenes/web/1a4dcd72-bc76-4920-a0ea-8d26fd72d7ed.jpg',
       '/imagenes/web/0ca6a826-6398-4b1e-9dc4-73405d90a839.jpg',
-      '/imagenes/web/125aeb7f-91a5-4ef4-8e0d-b4c3ee387de9.jpg',
-      '/imagenes/web/36dee672-595c-40f3-8d4c-1890ea914371.jpg',
-      '/imagenes/web/658b2344-8946-4852-aa63-4ca524974202.jpg',
-      '/imagenes/web/0d273b60-e4c6-44e0-b82d-3960702fc1b4.jpg',
     ],
   },
 ]
@@ -62,16 +54,16 @@ export const Hero: React.FC = () => {
       className="relative min-h-[88vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 touch-pan-y"
     >
       <div
-        className="absolute inset-0 pointer-events-none select-none flex flex-col justify-center gap-2.5 sm:gap-4 md:gap-5 touch-pan-y"
+        className="absolute inset-0 pointer-events-none select-none flex flex-col justify-center gap-3 sm:gap-5 md:gap-6 touch-pan-y"
         aria-hidden="true"
       >
         {MARQUEE_ROWS.map((row, rowIdx) => (
           <div key={rowIdx} className="overflow-hidden w-full touch-pan-y">
-            <div className={`marquee-track gap-2.5 sm:gap-4 md:gap-5 ${row.reverse ? 'marquee-reverse' : ''}`}>
+            <div className={`marquee-track gap-3 sm:gap-5 ${row.reverse ? 'marquee-reverse' : ''}`}>
               {[...row.images, ...row.images].map((src, idx) => (
                 <div
                   key={idx}
-                  className="w-36 sm:w-52 md:w-64 h-24 sm:h-36 md:h-44 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 bg-brand-cream-dark shadow-sm"
+                  className="w-40 sm:w-56 md:w-72 h-28 sm:h-40 md:h-52 rounded-xl sm:rounded-2xl overflow-hidden shrink-0 bg-brand-cream-dark shadow-sm"
                 >
                   <img
                     src={src}
@@ -79,8 +71,8 @@ export const Hero: React.FC = () => {
                     className="w-full h-full object-cover"
                     loading="eager"
                     decoding="async"
-                    width="256"
-                    height="176"
+                    width="288"
+                    height="208"
                   />
                 </div>
               ))}
@@ -92,6 +84,8 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none hero-veil touch-pan-y" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
+        <div className="hero-glow" aria-hidden="true" />
+
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-olive leading-[1.15] tracking-tight hero-title">
           Velas de cera de soja, aromas naturales y diseños únicos
         </h1>

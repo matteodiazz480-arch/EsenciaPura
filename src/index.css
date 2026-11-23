@@ -35,7 +35,7 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 34s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
   touch-action: pan-y;
@@ -43,11 +43,25 @@
 
 .marquee-reverse {
   animation-direction: reverse;
-  animation-duration: 40s;
+  animation-duration: 38s;
 }
 
 .hero-veil {
-  background: radial-gradient(ellipse 80% 65% at center, rgba(245, 239, 230, 0.62) 0%, rgba(245, 239, 230, 0.42) 50%, rgba(245, 239, 230, 0.15) 100%);
+  background: radial-gradient(ellipse 85% 70% at center, rgba(245, 239, 230, 0.45) 0%, rgba(245, 239, 230, 0.25) 50%, rgba(245, 239, 230, 0.08) 100%);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  max-width: 44rem;
+  height: 22rem;
+  background: radial-gradient(ellipse at center, rgba(245, 239, 230, 0.88) 0%, rgba(245, 239, 230, 0.5) 55%, transparent 75%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero-title {
